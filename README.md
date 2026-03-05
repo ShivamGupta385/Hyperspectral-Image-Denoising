@@ -24,14 +24,14 @@ Ensure you have Python 3.7+ installed. You can install the required dependencies
 pip install numpy scipy matplotlib scikit-image scikit-learn
 ```
 
-Usage
-Clone this repository to your local machine.
+Usage:
+* Clone this repository to your local machine.
 
-Place your hyperspectral image file (.mat or .npy) in the project directory.
+* Place your hyperspectral image file (.mat or .npy) in the project directory.
 
-Open the script and scroll to the if __name__ == "__main__": block at the bottom.
+* Open the script and scroll to the if __name__ == "__main__": block at the bottom.
 
-Update the input variables with your specific file path and desired noise parameters:
+* Update the input variables with your specific file path and desired noise parameters:
 ```
 Python
 # --- [INPUT REQUIRED] SET HSI FILE PATH ---
@@ -44,16 +44,16 @@ stripe_ratio = 0.2        # Fraction of spectral bands affected by stripes
 ```
 
 Run the script:
-
-Bash
+```
 python denoising_pipeline.py
-Pipeline Overview
-Normalization: The raw HSI cube is min-max normalized to a [0, 1] scale.
+```
+Pipeline Overview:
+* Normalization: The raw HSI cube is min-max normalized to a [0, 1] scale.
 
-Degradation: The add_mixed_noise function applies the defined noise tolerances across the spectral bands.
+* Degradation: The add_mixed_noise function applies the defined noise tolerances across the spectral bands.
 
-RPCA: The noisy image is flattened and processed through a Fast RPCA algorithm to recover the low-rank component.
+* RPCA: The noisy image is flattened and processed through a Fast RPCA algorithm to recover the low-rank component.
 
-PCA + NLM: The low-rank cube is projected into a lower-dimensional PCA space, where Non-Local Means filtering is applied to estimate and remove remaining noise before reconstructing the full spectral cube.
+* PCA + NLM: The low-rank cube is projected into a lower-dimensional PCA space, where Non-Local Means filtering is applied to estimate and remove remaining noise before reconstructing the full spectral cube.
 
-Evaluation: The script outputs a detailed table of Mean, Median, Max, and Min values for PSNR and SSIM, alongside the Global MSAD score.
+* Evaluation: The script outputs a detailed table of Mean, Median, Max, and Min values for PSNR and SSIM, alongside the Global MSAD score.
