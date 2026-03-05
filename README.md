@@ -20,7 +20,7 @@ This repository contains a robust, generalized Python pipeline for simulating an
 
 Ensure you have Python 3.7+ installed. You can install the required dependencies using pip:
 
-```bash
+```
 pip install numpy scipy matplotlib scikit-image scikit-learn
 
 Usage
