@@ -11,8 +11,9 @@ This repository contains a robust, generalized Python pipeline for simulating an
   * Gaussian Noise
   * Salt & Pepper (Impulse) Noise
   * Structural Stripes / Dead Lines
-* **Advanced Denoising Pipeline:** * **Step 1:** Fast Randomized RPCA to separate low-rank structural data from sparse corruptions.
-  * **Step 2:** PCA-based dimensionality reduction followed by spatial NLM denoising to smooth out residual noise.
+* **Advanced Denoising Pipeline:**
+* **Step 1:** Fast Randomized RPCA to separate low-rank structural data from sparse corruptions.
+* **Step 2:** PCA-based dimensionality reduction followed by spatial NLM denoising to smooth out residual noise.
 * **Quantitative Evaluation:** Automatically computes detailed metrics including PSNR, SSIM, and Global Mean Spectral Angle Distance (MSAD).
 * **Visualization:** Built-in matplotlib visualization to compare the Original, Noisy, and Denoised bands side-by-side.
 
