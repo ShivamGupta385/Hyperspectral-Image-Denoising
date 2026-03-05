@@ -22,6 +22,7 @@ Ensure you have Python 3.7+ installed. You can install the required dependencies
 
 ```
 pip install numpy scipy matplotlib scikit-image scikit-learn
+```
 
 Usage
 Clone this repository to your local machine.
@@ -31,7 +32,7 @@ Place your hyperspectral image file (.mat or .npy) in the project directory.
 Open the script and scroll to the if __name__ == "__main__": block at the bottom.
 
 Update the input variables with your specific file path and desired noise parameters:
-
+```
 Python
 # --- [INPUT REQUIRED] SET HSI FILE PATH ---
 file_path = "your_image_file.npy"  
@@ -40,6 +41,8 @@ file_path = "your_image_file.npy"
 gaussian_variance = 0.1   # Variance limit for Gaussian noise (G)
 salt_pepper_prob = 0.2    # Probability limit for Salt & Pepper noise (P)
 stripe_ratio = 0.2        # Fraction of spectral bands affected by stripes
+```
+
 Run the script:
 
 Bash
